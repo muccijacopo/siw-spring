@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>Elenco studenti</title>
+</head>
+<body>
+	<h1>Elenco studenti</h1>
+	
+	<ul>
+		<li th:each="studente: ${studenti}">
+			<a th:href="@{'/studente/' + ${studente.id}}" th:text="${studente.nome}">Nome</a>
+		</li>
+	</ul>
+</body>
+</html>

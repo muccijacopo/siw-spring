@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>Dettagli studente</title>
+</head>
+<body>
+	<h1>Dettagli studente</h1>
+<div>
+	Nome: <span th:text="${studente.nome}">Nome</span><br>
+	Cognome: <span th:text="${studente.cognome}">Cognome</span>
+</div>
+
+<div>
+	<form th:action="@{'/eliminaStudente/' + ${studente.id}}" method="POST">
+		<button type="submit">Elimina studente</button>
+	</form>
+</div>
+
+</body>
+</html>
